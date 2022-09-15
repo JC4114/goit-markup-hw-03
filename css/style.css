@@ -16,16 +16,39 @@ body {
     font-size: 14px;
     line-height: 1.88;
     letter-spacing: 0.03em;
-    width: 1600px;
+
 
 }
 
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
 
 /* site-nav */
-.site-nav-flex{
-    display: inline-flexbox;
+.site-nav {
+    align-items: center;
+    display: flex;
+    padding: 25px 0px;
 }
+
 .site-nav-link,
 .contacts-link {
     color: var(--site-nav-link);
@@ -58,16 +81,73 @@ body {
     font-size: 26px;
     font-weight: 700;
     line-height: 1.19;
+    margin-right: 94px;
 }
-.conteiner{
-    display:flex;
-    margin-top: 20px;
+
+/* conteiners */
+.header {
+    display: flex;
+    align-items: center;
+    padding-left: 215px;
+    padding-right: 215px;
 }
-.contacts-main{
+
+.conteiner {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+
+}
+
+.conteiner-about {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+
+}
+
+.contacts-main {
     justify-content: flex-end;
+    display: flex;
+    margin-left: auto;
 }
 
+.contacts-main li:not(:last-child) {
+    margin-right: 50px;
+}
 
+.conteiner-site-nav {
+    width: 281px;
+    height: 16px;
+    justify-content: space-between;
+    display: flex;
+    margin-right: 50px;
+}
+
+.conteiner-site-nav .contacts-link+.contacts-link {
+    margin-left: 50px;
+}
+
+.conteiner-buttons {
+    display: flex;
+    justify-content: center;
+    width: 575px;
+    height: 54px;
+}
+
+.work-conteiner {
+    display: flex;
+
+    width: calc(100-2*30)/2;
+}
+/* items */
+.item-team:not(:last child){
+    margin-right: 50px;
+}
+.item-team{
+    width: calc((100-3*30)/4);
+}
 
 /* deactivates */
 .list {
@@ -93,13 +173,15 @@ a {
 
 
 /* sections */
+.section {
+    padding: 94px 0;
+}
+
 .hero {
     background: var(--black-background-color);
-
-    width: 1600px;
-    height: 600px;
-    left: 0px;
-    top: 80px;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .hero-title {
@@ -109,8 +191,16 @@ a {
     font-weight: 900;
     line-height: 1.36;
     letter-spacing: 0.06em;
+    max-width: 696px;
+    width: 100%;
     text-align: center;
-    padding: 200px 452px 280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.work-title,
+.team-title {
+    margin-bottom: 50px;
 }
 
 .section-title,
@@ -119,23 +209,34 @@ a {
 
 }
 
+.item-about {
+    width: 270px;
+}
+
 .section-title {
     font-size: 36px;
     line-height: 1.17;
+    margin-left: auto;
+        max-width: 696px;
+    width: 100%;
 
 }
 
 .about {
-
     font-size: 16px;
     font-weight: 700;
     line-height: 1.19;
+}
 
+.item-about:not(:last-child) {
+    margin-right: 30px;
 
 }
 
 .team {
     background-color: var(--background-milk-color);
+    display: flex;
+    
 }
 
 .name {
@@ -147,13 +248,22 @@ a {
 
 
 }
-.projects-main{
+
+.projects-main {
+    display: flex;
     flex-wrap: wrap;
-  
-        width: 1170px;
-        height: 1360px;
-        left: 215px;
-        top: 174px;
+
+    width: 1170px;
+    height: 1360px;
+    left: 215px;
+    top: 174px;
+}
+
+.project-div {
+    margin-top: 20px;
+    width: 322px;
+    height: 70px;
+
 }
 
 .projects {
@@ -181,9 +291,15 @@ a {
     border: none;
     font-weight: 500;
     line-height: 1.63;
+
     text-align: center;
     padding: 6px 22px;
     border-radius: 4px;
+}
+
+.conteiner-buttons .button:not(:last-child) {
+    margin-right: 8px;
+
 }
 
 .button:hover,
@@ -196,11 +312,14 @@ a {
     background-color: var(--accent-color);
     color: var(--white-color);
 }
-.button-first-place{
-        margin: 350px 692px 200px;
-        font-weight: 700;
 
+.button-first-place {
+    margin-top: 30px;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 /* footer */
 footer {
@@ -208,6 +327,8 @@ footer {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.71;
+    padding: 60px 0;
+    padding-left: 215px; ;
 }
 
 .studio {
