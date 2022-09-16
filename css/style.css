@@ -90,6 +90,7 @@ img {
     align-items: center;
     padding-left: 215px;
     padding-right: 215px;
+    border-bottom: 1px solid #ECECEC;;
 }
 
 .conteiner {
@@ -132,21 +133,46 @@ img {
 .conteiner-buttons {
     display: flex;
     justify-content: center;
-    width: 575px;
-    height: 54px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 94px;
+    margin-bottom: 34px;
+}
+
+.conteiner-buttons li:not(:last-child) {
+    margin-right: 8px;
+
 }
 
 .work-conteiner {
     display: flex;
 
-    width: calc(100-2*30)/2;
 }
 /* items */
 .item-team:not(:last child){
     margin-right: 50px;
 }
 .item-team{
-    width: calc((100-3*30)/4);
+    width:calc((100% - 3 * 30px) / 4);
+    }
+.item-team:not(:last-child){
+    margin-right: 30px;
+}
+.work-conteiner li{
+    width: calc((100% - 2 * 30px) / 3);
+}
+.work-conteiner li:not(:last-child){
+margin-right: 30px;
+}
+.div-name{
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+padding: 10px;
+margin-top: 30px;
+justify-content: center;
+
 }
 
 /* deactivates */
@@ -244,25 +270,27 @@ a {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.88;
-    background-color: var(--white-color);
+    
 
+/* PROJECTS */
 
 }
 
 .projects-main {
     display: flex;
     flex-wrap: wrap;
-
-    width: 1170px;
-    height: 1360px;
-    left: 215px;
-    top: 174px;
+    width: 100%;
+    margin-right: auto;
+margin-left: auto;
+margin-bottom: 94px;
 }
-
 .project-div {
-    margin-top: 20px;
-    width: 322px;
+        width: 322px;
     height: 70px;
+    border-bottom: 1px solid #ECECEC;
+    border-right: 1px solid #ECECEC;
+    border-left: 1px solid #ECECEC;
+    padding: 20px 24px;
 
 }
 
@@ -275,8 +303,11 @@ a {
     text-align: left;
 }
 
-.portfolio li {
+.projects-main li {
     background-color: var(--white-color);
+    margin: 15px;
+    width: calc((100% - 6 * 15px) / 3);
+    
 }
 
 
@@ -297,10 +328,7 @@ a {
     border-radius: 4px;
 }
 
-.conteiner-buttons .button:not(:last-child) {
-    margin-right: 8px;
 
-}
 
 .button:hover,
 .button:focus {
@@ -330,10 +358,19 @@ footer {
     padding: 60px 0;
     padding-left: 215px; ;
 }
+footer address{
+padding-top: 20px;
+
+}
+
+footer li:not(:last-child){
+    margin-bottom: 9px;
+}
 
 .studio {
     color: var(--site-nav-link);
 }
+
 
 footer .studio {
     color: var(--white-color);
